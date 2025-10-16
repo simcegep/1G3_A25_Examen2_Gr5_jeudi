@@ -41,12 +41,16 @@ def pourcentage_mots_max(mots, taille):
     total_valide = 0
     count_sup = 0
     for mot in mots:
-        longueur = len(mot)
+        longueur = len(mots)
         if longueur < taille:
             count_sup = 1
-
-    pourcentage = (count_sup / total_valide) * 100
-    return round(pourcentage, 2)
+    try:
+         pourcentage = (count_sup / total_valide) * 100
+         return round(pourcentage, 2)
+    except ZeroDivisionError:
+        print("division par zero!")
+    else:
+        print("pourcentage est ", pourcentage)
 
 if __name__ == "__main__":
     animaux = ["chat", "chien", "éléphant", "souris", "hippopotame", 42, None, "oiseau"]

@@ -4,6 +4,12 @@ from debogage_mot_long import mot_plus_long, pourcentage_mots_max  # Remplacer p
 # Tests pour mot_plus_long
 # ============================
 # TODO: Tests unitaires pour la fonction mot_plus_long (maximum 5 différents)
+def test_mot_plus_long():
+    mots = ["pamplemousse", "hippopotame", "pourcentages", "infiltrage", "chaton", 42, True, ]
+    resultat = pourcentage_mots_max(mots, 10)
+
+    assert resultat == pamplemousse
+
 
 # ============================
 # Tests pour pourcentage_mots_max
@@ -45,7 +51,8 @@ def test_pourcentage_mots_max_tous_inferieur():
     assert False
 
 def test_pourcentage_mots_max_tous_inferieur():
-    mots = 7
+    mots =
     resultat = pourcentage_mots_max(mots, 3)
 
     assert resultat == None
+
