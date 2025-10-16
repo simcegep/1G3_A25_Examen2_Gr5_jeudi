@@ -3,15 +3,15 @@
 - Créer au plan de tests contenant au moins 5 cas de tests **DIFFÉRENTS/VARIÉS**.
 - Créer les tests unitaires pour tous les cas de tests.
 
-|     **mots**                    | **taille** | **Résultat attendu** | **Remarque ou Message affiché** 
-|---------------------------------|-------|----------------------|---------------------------------|
-|["pamplemousse", "hippopotame", "pourcentages", "infiltrage", "chaton", 42, True, ]| 10    | 3/7                  |                                 |
-|                                 |       |                      |                                 |
-|                                 |       |                      |                                 |
-|                                 |       |                      |                                 |
-|                                 |       |                      |                                 |
-|                                 |       |                      |                                 |
-|                                 |       |                      |                                 |
+| **mots**                                                                            | **taille** | **Résultat attendu** | **Remarque ou Message affiché** 
+|-------------------------------------------------------------------------------------|------------|----------------------|---------------------------------|
+| ["pamplemousse", "hippopotame", "pourcentages", "infiltrage", "chaton", 42, True, ] | 10         | 3/7                  |                                 |
+| ["pamplemousse"]                                                                    | 10         | 100%                 |                                 |
+| ["pamplemousse","chaton"]                                                           | 10         | 50%                  |                                 |
+| ["pamplemousse","chaton", 42]                                                       | 10         | 33%                  |                                 |
+| ["pamplemousse","chaton", 42, True]                                                 | 10         | 25%                  |                                 |
+|                                                                                     |            |                      |                                 |
+|                                                                                     |            |                      |                                 |
 
 # Tests unitaires pour la fonction _pourcentage_mots_max_
 | **mots**                                     | **taille** | **Résultat attendu** | **Remarque ou Message affiché**                                      |

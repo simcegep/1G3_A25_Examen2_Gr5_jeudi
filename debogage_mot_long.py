@@ -48,12 +48,13 @@ def pourcentage_mots_max(mots, taille):
          pourcentage = (count_sup / total_valide) * 100
          return round(pourcentage, 2)
     except ZeroDivisionError:
-        print("division par zero!")
+        return None
     else:
         print("pourcentage est ", pourcentage)
 
 if __name__ == "__main__":
     animaux = ["chat", "chien", "éléphant", "souris", "hippopotame", 42, None, "oiseau"]
+    print(animaux)
     print("Mot le plus long :", mot_plus_long(animaux))
     pourcentage = pourcentage_mots_max(animaux, 5)
 

@@ -1,4 +1,4 @@
-from debogage_mot_long import mot_plus_long, pourcentage_mots_max  # Remplacer par le nom de ton fichier
+from debogage_mot_long import mot_plus_long, pourcentage_mots_max
 
 # ============================
 # Tests pour mot_plus_long
@@ -8,7 +8,7 @@ def test_mot_plus_long():
     mots = ["pamplemousse", "hippopotame", "pourcentages", "infiltrage", "chaton", 42, True, ]
     resultat = pourcentage_mots_max(mots, 10)
 
-    assert resultat == pamplemousse
+    assert resultat == 0.42857142857142855
 
 
 # ============================
@@ -51,7 +51,7 @@ def test_pourcentage_mots_max_tous_inferieur():
     assert False
 
 def test_pourcentage_mots_max_tous_inferieur():
-    mots =
+    mots = ["Rien"]
     resultat = pourcentage_mots_max(mots, 3)
 
     assert resultat == None
