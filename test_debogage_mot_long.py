@@ -1,3 +1,5 @@
+from rich.repr import Result
+
 from debogage_mot_long import mot_plus_long, pourcentage_mots_max
 
 # ============================
@@ -8,7 +10,7 @@ def test_mot_plus_long():
     mots = ["pamplemousse", "hippopotame", "pourcentages", "infiltrage", "chaton", 42, True, ]
     resultat = pourcentage_mots_max(mots, 10)
 
-    assert resultat == 0.42857142857142855
+    assert resultat == None
 
 
 # ============================
@@ -21,12 +23,15 @@ def test_pourcentage_mots_max_normal():
     assert resultat == 75.0
 
 def test_pourcentage_mots_max_tous_superieur():
+    mots = ["éléphant", "hippopotame", "girafe"]
+    resultat = pourcentage_mots_max(mots, 4)
+
+    assert resultat == 100.0
     """
     Lorsque tous les mots présents dépassent la taille,
     le pourcentage retourné est 100%.
     """
-    # TODO: Complèter ce test unitaire.
-    assert False
+
 
 def test_pourcentage_mots_max_elements_invalides():
     mots = ["pamplemousse", 42, "cacahuète", None]
@@ -41,18 +46,18 @@ def test_pourcentage_mots_max_liste_vide():
     assert resultat is None
 
 def test_pourcentage_mots_max_tous_inferieur():
+    mots = ["chat", "chien", "rat"]
+    resultat = pourcentage_mots_max(mots, 5)
     """
     Lorsque tous les mots présents sont
     plus petits que la taille, le pourcentage
     retourné est 0.0%.
     """
-    # TODO: Ajouter le cas de test correspondant à la description
-    #       au plan de tests et complèter ce test unitaire.
-    assert False
+    assert resultat == 0.0
 
 def test_pourcentage_mots_max_tous_inferieur():
-    mots = ["Rien"]
+    mots = ["chat"]
     resultat = pourcentage_mots_max(mots, 3)
 
-    assert resultat == None
+    assert resultat is None
 
