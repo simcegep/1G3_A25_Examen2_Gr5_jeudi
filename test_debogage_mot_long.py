@@ -61,3 +61,4 @@ def test_pourcentage_mots_max_tous_inferieur():
 
     assert resultat is None
 
+.

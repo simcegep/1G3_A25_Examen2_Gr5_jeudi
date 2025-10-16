@@ -22,3 +22,4 @@
 | []                                           | 5          | None                 | "Impossible de calculer le pourcentage. Aucun élément valide."       |
 | ["chat", "chien", "rat"]                     | 5          | 0.0                  |                                                                      |
 | "chat"                                       | 3          | None                 | "Impossible de calculer le pourcentage. 'chat' n'est pas une liste." |
+.
